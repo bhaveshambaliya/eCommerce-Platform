@@ -1,0 +1,424 @@
+$first-color: #414242;
+$second-color: #f26449;
+
+/* -------------- CUSTOMER REVIEW CAROUSEL CSS ----------- */
+#review-slider .slick-dots{
+  position: absolute;
+  top: -50px;
+}
+#review-slider .slick-dots button::before{
+  font-size: 14px !important;
+  color: black !important;
+  opacity: 1 !important;
+}
+#review-slider .slick-dots .slick-active button::before{
+  font-size: 14px !important;
+  color: $second-color !important;
+  opacity: 1 !important;
+}
+/* ----------------- Customer Slider CSS ------------- */
+.customers-slider .slick-track{
+  display: flex !important;
+  align-items: center !important;
+}
+
+.customers-slider .slick-dots button::before{
+  color: rgb(238, 231, 231);
+  opacity: 1;
+  font-size: 10px;
+}
+.customers-slider .slick-dots .slick-active button::before{
+  color: black;
+}
+.customers-slider .slick-prev{
+  left: 2px;
+  z-index: 2;
+}
+.customers-slider .slick-next{
+  right: 2px;
+  z-index: 2;
+}
+/* ---------------------- Filter Accordion ------------------------ */
+#filter-accord .accordion-item {
+  margin: 15px 0;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: 2px solid rgb(221, 220, 220);
+}
+#filter-accord .accordion-header > button {
+  display: block;
+  text-transform: capitalize;
+  font-weight: 700;
+  padding: 20px;
+}
+#filter-accord .accordion-header > button::after {
+  background-image: none;
+  position: absolute;
+  content: "\002B";
+  font-size: 40px;
+  font-weight: 100;
+  top: 5px;
+  right: 20px;
+}
+#filter-accord .accordion-header > button:not(.collapsed) {
+  color: black;
+  background-color: white;
+  border: none !important;
+}
+#filter-accord .accordion-header > button:not(.collapsed)::after {
+  transform: none;
+}
+
+/* ------------ Dimension slider CSS ---------------- */
+#dms-slider {
+  position: relative;
+  padding: 40px 20px;
+}
+#dms-slider div{
+    position: relative;
+    top: -30px;
+}
+#dms-slider input {
+  appearance: unset;
+  width: 100%;
+  height: 2px;
+  background-color: $second-color;
+  position: absolute !important;
+  left: 0px;
+  bottom: 0px;
+}
+#dms-slider input::-webkit-slider-thumb {
+  appearance: unset !important;
+  height: 25px;
+  width: 25px;
+  border: 2px solid $second-color;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0.5px 0.5px 5px 0.5px $second-color;
+  z-index: 1 !important;
+  position: relative;
+   top: -12.5px
+}
+#dms-slider input:last-of-type::-webkit-slider-runnable-track {
+  height: 2px;
+}
+#dms-slider input:first-of-type::-webkit-slider-runnable-track {
+  height: 4px
+}
+
+/* ---------- Product Catalogue CSS ------------------- */
+#product-card:hover{
+  cursor: pointer;
+}
+#product-card a{
+  text-decoration: none;
+  color: inherit;
+}
+#product-card a:hover{
+  text-decoration: underline;
+}
+#product-card h4{
+  color: $second-color;
+}
+#product-card span{
+  color: rgb(161, 161, 161);
+  font-size: 13px;
+}
+.compare{
+  display: none;
+  padding: 1rem 0;
+}
+#product-card:hover .compare{
+  display: block;
+}
+.filterBtn{
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: $first-color;
+  padding: 6px 36px;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+.filterBtn:hover{
+  background-color: white;
+  color: $first-color;
+  border:2px solid $first-color;
+}
+.sortBy{
+  margin-left: 5px;
+  padding: 6px 18px;
+  outline: none;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  color: rgb(141, 137, 137);
+}
+.pageSelect{
+  margin: 0px 8px;
+  padding: 5px 8px;
+  outline: none;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+}
+.page-link{
+  color: $first-color;
+  border: none;
+}
+.page-link:focus{
+  background-color:inherit;
+  color: $first-color;
+  outline: none ;
+  box-shadow: none;
+}
+.page-item.active .page-link{
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  background-color: white;
+  color: $first-color;
+}
+/* ------------- PRODUCT DETAILS CSS ---------------- */
+#product-dinkus{
+  font-size:25px;
+  position: absolute;
+  top: 35%;
+  left:-30%;
+  opacity: 0.6;
+  text-align: center;
+  background-color: #e02121c5;
+  z-index: 1;
+  transform: rotate(-37.5deg);
+  transform-origin: center center;
+  padding: 0.5vw 0;
+  width: 160%;
+  color: white;
+
+  @media (min-width:768px) and (max-width:1366px) {
+    top: 18vw
+  }
+}
+.product-slider .slick-dots{
+  position: relative !important;
+  white-space: nowrap;
+}
+.product-slider .slick-dots li{
+  width:90px;
+  height: 90px;
+  margin: 0 10px;
+  padding: 10px;
+}
+.product-slider .slick-dots li.slick-active{
+  border: 1px solid gainsboro;
+}
+.product-slider .slick-next{
+  top: 35%;
+  right: 10px;
+  width: 30px !important;
+  height: 30px !important;
+  fill: gainsboro;
+  z-index: 2;
+}
+.product-slider .slick-prev{
+  top:35%;
+  left: 10px;
+  width: 30px !important;
+  height: 30px !important;
+  fill: gainsboro;
+  z-index: 2;
+}
+.pro-price-btn-box button{
+  padding: 10px 0px;
+  width: 50%;
+  border: 1px solid rgb(146, 146, 146);
+  background-color: white;
+  color: rgb(129, 129, 129);
+}
+.pro-price-btn-box .wishlistBtn{
+  border-radius: 5px 0 0 5px;
+}
+.pro-price-btn-box .compareBtn{
+  border-radius: 0 5px 5px 0;
+}
+.add-cart-btn{
+  padding: 10px 0px;
+  color: white !important;
+  font-weight: 500;
+  background-color: $second-color !important;
+  width: 100% !important;
+  border: 1px solid $second-color !important;
+  border-radius: 05px;
+}
+.flexi-finance-box{
+  background-color: $first-color;
+  color: white;
+  border-radius: 6px;
+}
+.flexi-finance-box button{
+  width: 50%;
+  padding: 10px 0px;
+  font-weight: 500;
+  color: white;
+  background-color: $second-color;
+  border: 1px solid $second-color
+}
+.flexi-finance-box button:first-of-type{
+  border-radius: 5px 0 0 5px;
+  border-right: 1px solid $first-color;
+}
+.flexi-finance-box button:last-of-type{
+  border-radius: 0 5px 5px 0;
+  border-left: 1px solid $first-color;
+}
+.shipping-box button{
+  background-color: $first-color;
+  color: white;
+  border: 1px solid $first-color;
+}
+.shipping-box input{
+  outline: none;
+  border: 1px solid $first-color;
+}
+.table-stripe>tbody>tr:nth-child(even){
+  background-color: rgba(0,0,0,0.05) !important;
+}
+/* ---------------- ABOUT ACCORDION CSS ----------------------- */
+#about-accordion ol{
+  list-style: lower-roman;
+}
+#about-accordion .accordion-item{
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid rgb(199, 198, 198);
+  padding: 8px 20px;
+  background-color:transparent;
+}
+#about-accordion .accordion-body{
+  padding-left: 30px;
+  color: rgb(145, 144, 144);
+}
+#about-accordion .accordion-header > button{
+  color: $first-color;
+  font-weight: 700;
+  padding-left: 50px;
+  background-color:transparent
+}
+#about-accordion .accordion-header > button:hover{
+  color: $second-color;
+}
+#about-accordion .accordion-header > button::after{
+  background-image: none;
+  transform: none;
+  content:"\002B";
+  font-size: 40px;
+  font-weight:lighter;
+  position: absolute;
+  color: $second-color;
+  left: 0px;
+  top:-2px;
+}
+#about-accordion .accordion-header > button:not(.collapsed) {
+  background-color: transparent;
+  border: none !important;
+}
+#about-accordion .accordion-header > button:not(.collapsed)::after {
+  content: none;
+}
+
+/* ------------- BENEFIT BOX CSS ----------------- */
+.benefit-box {
+  background-color: #fdeeee;
+  padding: 40px 70px 30px;
+}
+.benefit-box hr:last-of-type {
+  display: none;
+}
+
+/* ----------- FINANCE CALC CSS -------------- */
+.value-slider {
+  appearance: unset;
+  opacity: 0.75;
+  background-color: $second-color !important;
+  height: 4px;
+  width: 100%;
+}
+.value-slider::-webkit-slider-thumb {
+  appearance: unset;
+  width: 30px;
+  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 1px 1px 5px $second-color;
+}
+#value-slider-table span{
+  padding-left: 100px;
+}
+#value-slider-table span>p{
+  position: absolute;
+  left: 85px;
+}
+
+/* --------------- COST CALCULATOR CSS ------------- */
+.calculate-costBtn{
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: $second-color !important;
+  border: 1px solid transparent;
+  padding: 15px 32px 12px 38px !important;
+  border-radius: 5px !important;
+  color: white !important;
+  position: relative;
+}
+.calculate-costBtn::before{
+  content: '\002b';
+  font-size: 10px;
+  background-color: white;
+  color: $second-color;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  left: 18px;
+}
+
+/* ---------------- INQUIRY FORM CSS ------------ */
+.inquiry-form label{
+  color: $second-color;
+  font-size: 14px;
+  font-weight: 500;
+}
+.inquiry-form .form-group{
+  width: 75%;
+  padding-bottom: 10px;
+  margin: 0px auto 25px;
+   border-bottom: 2px solid gainsboro;
+}
+.inquiry-form .form-control{
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  outline: none;
+  margin: 5px 10px 0;
+  box-shadow: none;
+  padding: 5px 0;
+}
+.inquiry-form .formSubmitBtn{
+  background-color: $second-color;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 12px 36px;
+  font-weight: 500;
+}
+.bigButton{
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.753) ;
+  border: 2px solid rgb(78, 78, 78);
+  border-radius: 5px;
+  padding: 20px 80px;
+  font-weight: 700;
+}
+.bigButton:hover{
+  background-color: $second-color;
+  border: 2px solid transparent;
+}
